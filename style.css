@@ -520,19 +520,19 @@ input[placeholder] {
 
 .catalog-item {
     display: flex;
-    justify-content: flex-start;
     margin: 72px;
-    gap: 36px;
+    justify-content: space-evenly;
 }
 
 .container-hotel {
     display: grid;
     align-content: space-between;
+    margin-left: 37px;
 }
 
 .hotel-descr {
     display: flex;
-    justify-content: flex-start;
+    justify-content: stretch;
     align-items: center;
     column-gap: 78px;
     font-size: 18px;
@@ -545,7 +545,6 @@ input[placeholder] {
 
 .hotel-btn {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     column-gap: 8px;
 }
@@ -588,10 +587,21 @@ input[placeholder] {
     padding: 15px;
 }
 
-.rating-icon {
-    background: url("img/rating-icon.svg") no-repeat center;
-    width: 18px;
-    height: 17px;
+.rating-container {
+    align-self: flex-end;
+}
+
+.rating {
+    display: inline-block;
+    width: 160px;
+    height: 37px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    background-color: var(--basic-light);
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
 }
 
 /* Pagination */
