@@ -5,8 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Sans+Narrow:wght@700&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=PT+Sans:wght@700&display=swap"
@@ -16,8 +16,9 @@
     <link rel="apple-touch-icon" href="img/favicon.png">
     <title>Седона - лучший курорт в Аризоне</title>
 </head>
-<body class="body">
+<body>
 
+<div class="container-body">
 <header class="header">
     <div class="header-container">
         <div class="container-header-nav">
@@ -79,29 +80,29 @@
 
             <li class="features-item block3">
                 <div class="features-item-container">
-                <img src="img/icon-1.svg" width="75" height="72" alt="Домик">
-                <h2 class="features-title">Жильё</h2>
-                <p class="features-descr">Рекомендуем пожить
-                    в&nbsp;настоящем мотеле,
-                    всё как в&nbsp;кино!</p>
+                    <img src="img/icon-1.svg" width="75" height="72" alt="Домик">
+                    <h2 class="features-title">Жильё</h2>
+                    <p class="features-descr">Рекомендуем пожить
+                        в&nbsp;настоящем мотеле,
+                        всё как в&nbsp;кино!</p>
                 </div>
             </li>
 
             <li class="features-item block4">
                 <div class="features-item-container">
-                <img src="img/icon-2.svg" width="74" height="70" alt="Бургер">
-                <h2 class="features-title">Еда</h2>
-                <p class="features-descr">Всегда заказывайте
-                    топовый фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
+                    <img src="img/icon-2.svg" width="74" height="70" alt="Бургер">
+                    <h2 class="features-title">Еда</h2>
+                    <p class="features-descr">Всегда заказывайте
+                        топовый фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
                 </div>
             </li>
 
             <li class="features-item block5">
                 <div class="features-item-container">
-                <img src="img/icon-3.svg" width="64" height="76" alt="Подарок">
-                <h2 class="features-title">Сувениры</h2>
-                <p class="features-descr">Не&nbsp;только китайского,
-                    но&nbsp;и&nbsp;настоящего местного производства!</p>
+                    <img src="img/icon-3.svg" width="64" height="76" alt="Подарок">
+                    <h2 class="features-title">Сувениры</h2>
+                    <p class="features-descr">Не&nbsp;только китайского,
+                        но&nbsp;и&nbsp;настоящего местного производства!</p>
                 </div>
             </li>
 
@@ -151,28 +152,28 @@
 
     <section class="search">
         <div class="container">
-        <div class="container-search">
-            <h2 class="search-title">Заинтересовались?</h2>
-            <p class="search-descr">Укажите предполагаемые даты поездки,<br>
-                и мы покажем вам лучшие предложения гостиниц в Седоне
-            </p>
-            <a class="btn-search" href="#">Поиск гостиницы в седоне</a>
-        </div>
+            <div class="container-search">
+                <h2 class="search-title">Заинтересовались?</h2>
+                <p class="search-descr">Укажите предполагаемые даты поездки,<br>
+                    и мы покажем вам лучшие предложения гостиниц в Седоне
+                </p>
+                <a class="btn-search" href="#">Поиск гостиницы в седоне</a>
+            </div>
         </div>
     </section>
 
     <section class="mail">
         <div class="container container-mail">
-        <div>
-            <h2 class="mail-title">Подпишитесь на рассылку</h2>
-            <p class="mail-descr">Только полезная информация и никакого спама,<br>
-                честное бойскаутское!</p>
-            <form class="email" id="login" method="get">
+            <div>
+                <h2 class="mail-title">Подпишитесь на рассылку</h2>
+                <p class="mail-descr">Только полезная информация и никакого спама,<br>
+                    честное бойскаутское!</p>
+                <form class="email" id="login" method="get">
                     <label for="email"></label>
-                    <input class="email-label"  placeholder="Ваш e-mail" type="email" name="email" id="email" required>
-                <button class="email-btn" type="submit" form="login">Подписаться</button>
-            </form>
-        </div>
+                    <input class="email-label" placeholder="Ваш e-mail" type="email" name="email" id="email" required>
+                    <button class="email-btn" type="submit" form="login">Подписаться</button>
+                </form>
+            </div>
         </div>
     </section>
 </main>
@@ -180,18 +181,17 @@
     <div class="container socials">
         <ul class="socials-list list-reset">
             <li class="socials-item">
-                <a href="#" class="socials-link" target="_blank" aria-label="link to twitter">
+                <a href="https://twitter.com/htmlacademy_ru" class="socials-link" target="_blank" aria-label="link to twitter">
                     <img src="img/twitter.svg" alt="twitter icon">
                 </a>
             </li>
             <li class="socials-item">
-                <a href="#" class="socials-link" target="_blank" aria-label="link to facebook">
-                    <img
-                            src="img/facebook.svg" alt="facebook icon">
+                <a href="https://www.facebook.com/htmlacademy" class="socials-link" target="_blank" aria-label="link to facebook">
+                    <img src="img/facebook.svg" alt="facebook icon">
                 </a>
             </li>
             <li class="socials-item">
-                <a href="#" class="socials-link" target="_blank"
+                <a href="https://www.youtube.com/c/HTMLAcademyRUS" class="socials-link" target="_blank"
                    aria-label="link to youtube">
                     <img src="img/youtube.svg" alt="youtube icon">
                 </a>
@@ -207,6 +207,8 @@
         </a>
     </div>
 </footer>
+</div>
+
 </body>
 </html>
 
