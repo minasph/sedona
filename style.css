@@ -72,6 +72,10 @@ img {
     justify-content: center;
 }
 
+fieldset {
+    border: none;
+}
+
 /*HEADER*/
 
 .header {
@@ -79,10 +83,12 @@ img {
     margin-bottom: -5px;
     padding: 0 20px;
 }
-.logo{
+
+.logo {
     position: relative;
     z-index: 2;
 }
+
 .header-container {
     display: flex;
     align-items: center;
@@ -174,9 +180,8 @@ img {
 }
 
 .features-item-container {
-    width: 250px;
+    width: 230px;
     gap: 25px;
-
 }
 
 .features-title {
@@ -309,16 +314,46 @@ img {
     font-weight: 400;
     margin-bottom: 50px;
 }
-.email{
+
+/*Catalog-mail*/
+
+.catalog-container-mail {
+    background: var(--basic-white);
+    padding: 94px 200px;
+    color: var(--basic-white);
+}
+
+.catalog-mail-title {
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: var(--basic-black);
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.catalog-mail-descr {
+    color: var(--basic-black);
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: none;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.email {
     display: flex;
     gap: 0;
-    margin: 0 auto;
     height: 60px;
+    justify-content: center;
 }
- input[placeholder] {
-     padding: 20px;
- }
-.email-label{
+
+input[placeholder] {
+    padding: 20px;
+}
+
+.email-label {
     display: inline-block;
     background-color: var(--basic-light);
     font-size: 18px;
@@ -331,7 +366,7 @@ img {
     border-bottom-left-radius: 10px;
 }
 
-.email-btn{
+.email-btn {
     display: inline-block;
     background-color: var(--special-cold-light);
     border: none;
@@ -343,6 +378,7 @@ img {
     font-weight: 700;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    cursor: pointer;
 }
 
 /*FOOTER*/
@@ -367,4 +403,238 @@ img {
     font-size: 40px;
     line-height: 40px;
     font-weight: 400;
+}
+
+/*CATALOG*/
+
+.filter {
+    background: url("img/catalog-background.jpg") no-repeat center / cover;
+    padding: 30px 70px;
+    color: var(--basic-white);
+    font-weight: 400;
+    text-transform: none;
+}
+
+.filter-title {
+    color: var(--basic-white);
+    font-size: 60px;
+    line-height: 78px;
+}
+
+.filter-subtitle {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.filter-list {
+    display: inline-block;
+    padding: 20px 0;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.filter-btn-submit {
+    width: 160px;
+    height: 48px;
+    background: var(--special-cold-light);
+    color: var(--basic-white);
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    border: none;
+}
+
+.filter-btn-button {
+    width: 160px;
+    height: 23px;
+    background: none;
+    color: var(--basic-white);
+    font-size: 18px;
+    line-height: 24px;
+    vertical-align: center;
+    border: none;
+}
+
+.button {
+    display: grid;
+}
+
+/* SORTING */
+.sorting {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.sorting-title {
+    font-size: 30px;
+    line-height: 39px;
+}
+
+.sort-filter {
+    width: 287px;
+    height: 48px;
+    border: var(--basic-gray) 3px solid;
+    border-radius: 4px;
+    margin-left: 192px;
+}
+
+.sort-btn {
+    width: 48px;
+    height: 48px;
+    border: var(--basic-gray) 3px solid;
+    border-radius: 4px;
+}
+
+.sort1 {
+    background: url("img/sort-icon-1.svg") no-repeat center;
+}
+
+.sort2 {
+    background: url("img/sort-icon-2.svg") no-repeat center;
+}
+
+.sort3 {
+    background: url("img/sort-icon-3.svg") no-repeat center;
+}
+
+/* Page-catalog */
+.catalog-title {
+    display: none;
+}
+
+.hotel-title {
+    font-size: 24px;
+    line-height: 31px;
+    margin: 0;
+    text-transform: none;
+}
+
+.catalog-item {
+    display: flex;
+    justify-content: flex-start;
+    margin: 72px;
+    gap: 36px;
+}
+
+.container-hotel {
+    display: grid;
+    align-content: space-between;
+}
+
+.hotel-descr {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 78px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: none;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.hotel-btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.more-btn {
+    width: 151px;
+    height: 37px;
+    background: var(--special-warm-light);
+    color: var(--basic-white);
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px;
+}
+
+.fav-btn {
+    width: 160px;
+    height: 37px;
+    background: var(--special-cold-light);
+    color: var(--basic-white);
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+}
+
+.btn-catalog {
+    margin: 0 auto;
+    display: block;
+    width: 625px;
+    height: 55px;
+    background: var(--special-cold-light);
+    border-radius: 4px;
+    color: var(--basic-white);
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+}
+
+.rating-icon {
+    background: url("img/rating-icon.svg") no-repeat center;
+    width: 18px;
+    height: 17px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 72px 30px;
+}
+
+.pagination-list {
+    display: flex;
+    gap: 8px;
+}
+
+.pagination-item {
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 15px;
+    background: var(--special-cold-light);
+    color: var(--basic-white);
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.pag-nav {
+    display: flex;
+    align-items: center;
+    gap: 51px;
+}
+
+.pagination-nav {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.pagination-btn {
+    width: 160px;
+    height: 48px;
+    border: var(--basic-gray) 3px solid;
+    border-radius: 4px;
 }
