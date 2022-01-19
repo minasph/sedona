@@ -5,131 +5,197 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Sans+Narrow:wght@700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=PT+Sans:wght@700&display=swap"
+          rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon.svg" type="image/svg=xml">
+    <link rel="apple-touch-icon" href="img/favicon.png">
     <title>Седона - лучший курорт в Аризоне</title>
 </head>
-<body>
+<body class="body">
 
 <header class="header">
-    <div class="container-header">
+    <div class="header-container">
         <div class="container-header-nav">
-            <ul class="header-nav-list">
+            <ul class="header-nav-list list-reset">
                 <li class="header-nav-item"><a>Главная</a></li>
                 <li class="header-nav-item"><a href="#">О Седоне</a></li>
                 <li class="header-nav-item"><a href="#">Гостиницы</a></li>
             </ul>
         </div>
-        <img src="#" alt="Sedona logo" class="logo">
-        <div class="container-header-menu">
-            <ul class="header-menu-list">
-                <li class="header-menu-item"><a class="search-header">Поиск</a></li>
-                <li class="header-menu-item"><a class="cart" href="#">Корзина</a></li>
-                <li class="header-menu-item"><a class="btn" href="#">Хочу сюда!</a></li>
+        <img src="img/logo_sedona.svg" alt="Sedona logo" class="logo">
+        <div class="container-header-menu ">
+            <ul class="header-menu-list list-reset">
+                <li class="header-menu-item">
+                    <a class="search-header">
+                        <img src="img/search.svg" alt="лупа, нажав на которую можно попасть в раздел поиска">
+                    </a>
+                </li>
+                <li class="header-menu-item">
+                    <a class="cart" href="#">
+                        <img src="img/fav.svg" alt="сердечко, которое хранит все твои избранные гостиницы">
+                    </a>
+                </li>
+                <li class="header-menu-item"><a class="header-btn" href="#">Хочу сюда!</a></li>
             </ul>
         </div>
     </div>
 </header>
 
 <main>
-    <section class="hero">
-        <div class="container">
-            <img class="hero-img"src="img/welcome.svg" width="458" height="352"
-                 alt="написано на английском добро пожаловать в седону красивыми голубыми черными и белыми буквами">
+    <section class="main-page">
+        <div class="hero">
+            <div class="hero-container">
+                <img class="hero-img" src="img/welcome.svg"
+                     alt="написано на английском добро пожаловать в Cедону красивыми голубыми черными и белыми буквами">
+            </div>
         </div>
         <div class="container">
-            <h1 class="hero-title">Седона — небольшой городок в Аризоне,
-                заслуживающий большего!</h1>
-            <p class="hero-descr">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+            <div class="main-container">
+                <h1 class="main-title">Седона — небольшой городок в Аризоне,<br>
+                    заслуживающий большего!</h1>
+                <p class="main-descr">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+            </div>
         </div>
     </section>
+
+
     <section class="features">
-        <ul class="features-list">
-            <li class="features-item">
-                <h2 class="features-title">Настоящий
-                    городок</h2>
-                <span class="features-span">№1</span>
-                <p class="features-descr">Седона — не аттракцион для туристов, там течёт
-                    своя жизнь</p>
+        <ul class="features-list list-reset">
+            <li class="features-item block1">
+                <div class="features-item-container">
+                    <h2 class="features-title">Настоящий <br>
+                        городок</h2>
+                    <span class="features-span">№1</span>
+                    <p class="features-descr">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт
+                        своя жизнь</p>
+                </div>
             </li>
-            <li class="features-item"><img src="img/photo-1.jpg" width="800" height="384"
-                alt="фотография города Седона"></li>
-            <li class="features-item">
+            <li class="features-item block2"></li>
+
+            <li class="features-item block3">
+                <div class="features-item-container">
                 <img src="img/icon-1.svg" width="75" height="72" alt="Домик">
                 <h2 class="features-title">Жильё</h2>
                 <p class="features-descr">Рекомендуем пожить
-                    в настоящем мотеле,
-                    всё как в кино!</p>
+                    в&nbsp;настоящем мотеле,
+                    всё как в&nbsp;кино!</p>
+                </div>
             </li>
-            <li class="features-item">
+
+            <li class="features-item block4">
+                <div class="features-item-container">
                 <img src="img/icon-2.svg" width="74" height="70" alt="Бургер">
                 <h2 class="features-title">Еда</h2>
                 <p class="features-descr">Всегда заказывайте
-                    топовый фирменный бургер, вы не разочаруетесь!</p>
+                    топовый фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
+                </div>
             </li>
-            <li class="features-item">
+
+            <li class="features-item block5">
+                <div class="features-item-container">
                 <img src="img/icon-3.svg" width="64" height="76" alt="Подарок">
                 <h2 class="features-title">Сувениры</h2>
-                <p class="features-descr">Не только китайского,
-                    но и настоящего местного производства!</p>
+                <p class="features-descr">Не&nbsp;только китайского,
+                    но&nbsp;и&nbsp;настоящего местного производства!</p>
+                </div>
             </li>
-            <li class="features-item"><img src="img/photo-2.jpg" width="800" height="384" alt="На фото Мост Дьявола"></li>
-            <li class="features-item">
-                <h2 class="features-title">Там есть
-                    мост дьявола</h2>
-                <span class="features-span">№2</span>
-                <p class="features-descr">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+
+            <li class="features-item block6"></li>
+
+            <li class="features-item block7">
+                <div class="features-item-container">
+                    <h2 class="features-title">Там есть <br>
+                        мост дьявола</h2>
+                    <span class="features-span">№2</span>
+                    <p class="features-descr">Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, разумеется</p>
+                </div>
             </li>
-            <li class="features-item">
-                <h2 class="features-title">Небольшая
-                    площадь
-                </h2>
-                <span class="features-span">№3</span>
-                <p class="features-descr">Все достопримечательности
-                    находятся очень близко</p>
+
+            <li class="features-item block8">
+                <div class="features-item-container">
+                    <h2 class="features-title">Небольшая <br>
+                        площадь</h2>
+                    <span class="features-span">№3</span>
+                    <p class="features-descr">Все достопримечательности
+                        находятся очень близко</p>
+                </div>
             </li>
-            <li class="features-item">
-                <h2 class="features-title">Красивая
-                    дорога
-                </h2>
-                <span class="features-span">№4</span>
-                <p class="features-descr">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+
+            <li class="features-item block9">
+                <div class="features-item-container">
+                    <h2 class="features-title">Красивая <br>
+                        дорога
+                    </h2>
+                    <span class="features-span">№4</span>
+                    <p class="features-descr">Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
+                </div>
             </li>
-            <li class="features-item">
-                <h2 class="features-title">Мало
-                    туристов
-                </h2>
-                <span class="features-span">№5</span>
-                <p class="features-descr">Большинство едет в Гранд Каньон и толпится там</p>
+
+            <li class="features-item block10">
+                <div class="features-item-container">
+                    <h2 class="features-title">Мало <br>
+                        туристов
+                    </h2>
+                    <span class="features-span">№5</span>
+                    <p class="features-descr">Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там</p>
+                </div>
             </li>
         </ul>
     </section>
+
+
     <section class="search">
+        <div class="container">
         <div class="container-search">
             <h2 class="search-title">Заинтересовались?</h2>
-            <p class="search-descr">Укажите предполагаемые даты поездки,
+            <p class="search-descr">Укажите предполагаемые даты поездки,<br>
                 и мы покажем вам лучшие предложения гостиниц в Седоне
             </p>
-            <span><a href="№">Поиск гостиницы в седоне</a></span>
+            <a class="btn-search" href="#">Поиск гостиницы в седоне</a>
+        </div>
         </div>
     </section>
+
     <section class="mail">
-        <div class="container-mail">
+        <div class="container container-mail">
+        <div>
             <h2 class="mail-title">Подпишитесь на рассылку</h2>
-            <p class="mail-descr">Только полезная информация и никакого спама,
+            <p class="mail-descr">Только полезная информация и никакого спама,<br>
                 честное бойскаутское!</p>
-            <!-- Здесь будет форма -->
+            <form class="email" id="login" method="get">
+                    <label for="email"></label>
+                    <input class="email-label"  placeholder="Ваш e-mail" type="email" name="email" id="email" required>
+                <button class="email-btn" type="submit" form="login">Подписаться</button>
+            </form>
+        </div>
         </div>
     </section>
-    </div>
 </main>
 <footer class="footer">
     <div class="container socials">
-        <ul class="socials-list">
-            <li class="socials-item"><a href="#" class="socials-link" target="_blank" aria-label="link to twitter"></a>
+        <ul class="socials-list list-reset">
+            <li class="socials-item">
+                <a href="#" class="socials-link" target="_blank" aria-label="link to twitter">
+                    <img src="img/twitter.svg" alt="twitter icon">
+                </a>
             </li>
-            <li class="socials-item"><a href="#" class="socials-link" target="_blank" aria-label="link to facebook"></a>
+            <li class="socials-item">
+                <a href="#" class="socials-link" target="_blank" aria-label="link to facebook">
+                    <img
+                            src="img/facebook.svg" alt="facebook icon">
+                </a>
             </li>
-            <li class="socials-item"><a href="#" class="socials-link" target="_blank"
-                                        aria-label="link to instagram"></a></li>
+            <li class="socials-item">
+                <a href="#" class="socials-link" target="_blank"
+                   aria-label="link to youtube">
+                    <img src="img/youtube.svg" alt="youtube icon">
+                </a>
+            </li>
         </ul>
     </div>
     <div class="container-footer-contacts">
@@ -137,9 +203,10 @@
     </div>
     <div class="container-copyright">
         <a href="https://htmlacademy.ru" class="logo-copyright">
-            <img src="#" alt="html-academy logo">
+            <img src="img/logo_htmlacademy.svg" alt="html-academy logo">
         </a>
     </div>
 </footer>
 </body>
 </html>
+
