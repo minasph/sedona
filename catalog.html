@@ -2,15 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Sans+Narrow:wght@700&display=swap"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=PT+Sans:wght@700&display=swap"
-          rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon.svg" type="image/svg=xml">
     <link rel="apple-touch-icon" href="img/favicon.png">
@@ -22,9 +17,9 @@
     <div class="header-container">
         <div class="container-header-nav">
             <ul class="header-nav-list list-reset">
-                <li class="header-nav-item"><a>Главная</a></li>
+                <li class="header-nav-item"><a href="index.html">Главная</a></li>
                 <li class="header-nav-item"><a href="#">О Седоне</a></li>
-                <li class="header-nav-item"><a href="#">Гостиницы</a></li>
+                <li class="header-nav-item"><a>Гостиницы</a></li>
             </ul>
         </div>
         <img src="img/logo_sedona.svg" alt="Sedona logo" class="logo">
@@ -71,15 +66,15 @@
                 <legend class="filter-subtitle">Тип жилья:</legend>
                 <ul class="filter-list list-reset">
                     <li>
-                        <input type="radio" name="typeofhotel" value="гостиница" id="filter_hotel" checked>
+                        <input type="radio" name="type" value="гостиница" id="filter_hotel" checked>
                         <label for="filter_hotel">Гостиница</label>
                     </li>
                     <li>
-                        <input type="radio" name="typeofhotel" value="мотель" id="filter_motel">
+                        <input type="radio" name="type" value="мотель" id="filter_motel">
                         <label for="filter_motel">Мотель</label>
                     </li>
                     <li>
-                        <input type="radio" name="typeofhotel" value="апартаменты" id="filter_apartment">
+                        <input type="radio" name="type" value="апартаменты" id="filter_apartment">
                         <label for="filter_apartment">Апартаменты</label>
                     </li>
                 </ul>
