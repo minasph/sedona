@@ -33,10 +33,19 @@
     --basic-black: #000000;
 
     --special-cold-light: #83B3D3;
-    --special-warm-light: #756257;
-
     --special-cold-dark: #68A2CA;
+    --special-cold-light20: rgba(131, 179, 211, 0.2);
+    --special-cold-light12: rgba(131, 179, 211, 0.12);
+
+    --special-warm-light: #756257;
     --special-warm-dark: #615048;
+
+    --special-neutral-light: #7DB54F;
+    --special-neutral-dark: #6C9E42;
+
+    --status-error: #FF5757;
+    --status-warning: #FD922E;
+    --status-success: #7DB550;
 }
 
 html {
@@ -96,8 +105,8 @@ fieldset {
 /* Хэдер */
 
 .page-header {
-    color: #000000;
-    background: #FFFFFF;
+    color: var(--basic-black);
+    background: var(--basic-white);
 }
 
 /* Навигация */
@@ -196,6 +205,8 @@ fieldset {
     padding-right: 72px;
 }
 
+/* Кнопка ХОЧУ СЮДА */
+
 .button-wont {
     display: inline-block;
     font-family: "PT Sans", sans-serif;
@@ -212,6 +223,22 @@ fieldset {
     text-transform: uppercase;
     cursor: pointer;
 }
+
+.button-wont:hover {
+    background: var(--special-warm-dark);
+}
+
+.button-wont:focus {
+    background: var(--special-warm-dark);
+    border: 3px var(--special-cold-light) solid;
+    border-radius: inherit;
+}
+
+.button-wont:active {
+    background: var(--special-warm-dark);
+    color: rgba(255, 255, 255, 0.3);
+}
+
 
 /* Первый экран */
 
@@ -297,7 +324,7 @@ fieldset {
 .features-item:nth-child(5),
 .features-item:nth-child(8),
 .features-item:last-child {
-    background-color: rgba(131, 179, 211, 0.12);
+    background-color: var(--special-cold-light12);
     color: var(--basic-black)
 }
 
@@ -307,7 +334,7 @@ fieldset {
 }
 
 .features-item:nth-child(9) {
-    background-color: rgba(131, 179, 211, 0.2);
+    background-color: var(--special-cold-light20);
     color: var(--basic-black)
 }
 
@@ -386,7 +413,22 @@ fieldset {
     padding: 10px;
 }
 
-/* Подписка на рассылку */
+.btn-search:hover {
+    background-color: var(--special-warm-dark);
+}
+
+.btn-search:focus {
+    background: var(--special-cold-dark);
+    border: 3px var(--special-warm-light) solid;
+    border-radius: inherit;
+}
+
+.btn-search:active {
+    background: var(--special-cold-dark);
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* ПОДПИСКА НА РАССЫЛКУ */
 
 .subscription {
     background: url("../img/background.jpg") no-repeat center / cover;
@@ -417,6 +459,49 @@ fieldset {
     justify-content: center
 }
 
+/* Форма для заполнения почты */
+.email-label {
+    display: inline-block;
+    background-color: var(--basic-light);
+    font-size: 18px;
+    line-height: 26px;
+    border: none;
+    font-weight: normal;
+    text-transform: none;
+    width: 600px;
+    height: 60px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.email-label:hover {
+    background: var(--basic-gray);
+}
+
+.email-label:focus {
+    background: var(--basic-gray);
+    border: 3px var(--special-cold-light) solid;
+    border-radius: inherit;
+}
+
+.email-label:active {
+    background: var(--basic-white);
+    border: 2px var(--basic-black) solid;
+    border-radius: inherit;
+}
+
+.email-label:invalid {
+    background: var(--basic-white);
+    border: 2px var(--status-error) solid;
+    border-radius: inherit;
+}
+
+input[placeholder] {
+    padding: 20px;
+}
+
+/* Кнопка подписаться на рассылку */
+
 .sub-btn {
     display: inline-block;
     background-color: var(--special-cold-light);
@@ -432,25 +517,22 @@ fieldset {
     cursor: pointer;
 }
 
-.email-label {
-    display: inline-block;
-    background-color: var(--basic-light);
-    font-size: 18px;
-    line-height: 26px;
-    border: none;
-    font-weight: normal;
-    text-transform: none;
-    width: 600px;
-    height: 60px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+.sub-btn:hover {
+    background: var(--special-cold-dark);
 }
 
-input[placeholder] {
-    padding: 20px;
+.sub-btn:focus {
+    background: var(--special-cold-dark);
+    border: 3px var(--special-warm-light) solid;
+    border-radius: inherit;
 }
 
-/* Футер */
+.sub-btn:active {
+    background: var(--special-cold-dark);
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* ФУТЕР */
 
 .page-footer {
     display: flex;
@@ -537,4 +619,668 @@ input[placeholder] {
     color: var(--special-warm-light);
     border: none;
     opacity: 30%;
+}
+
+
+/* КАТАЛОГ */
+
+/* Фильтр каталога - первый экран */
+
+.filter {
+    background: url("../img/catalog-background.jpg") no-repeat center / cover;
+    padding: 30px 70px;
+    color: var(--basic-white);
+    font-weight: 400;
+    text-transform: none;
+}
+
+.filter-title {
+    color: var(--basic-white);
+    font-size: 60px;
+    line-height: 78px;
+    padding: 0;
+    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+
+
+/* Хлебные крошки - меню */
+
+.breadcrumbs {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-left: 63px;
+}
+
+.bread-icon {
+    position: relative;
+    left: -20px;
+}
+
+.breadcrumbs-link {
+    color: var(--basic-white);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    outline: none;
+    padding: 1px 8px;
+}
+
+.filter-subtitle {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.filter-list {
+    display: grid;
+    gap: 13px;
+    padding: 20px 0;
+}
+
+.filter-form {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.control-label {
+    line-height: 20px;
+    font-weight: 400;
+}
+
+/* !!! Здесь буду стили для чекбоксов и радиокнопок !!! */
+
+/* Стоимость - ранжирование по цене */
+
+.range-scale {
+    margin-top: 28px;
+    width: 287px;
+    position: relative;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.range-bar {
+    width: 227px;
+    position: absolute;
+    height: 4px;
+    background-color: var(--basic-white);
+}
+
+.range-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--basic-white);
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.range-toggle:hover {
+    background-color: var(--basic-white);
+}
+
+.range-toggle:active,
+.range-toggle:focus-visible {
+    outline: 3px var(--special-cold-light) solid;
+}
+
+.toggle-min {
+    top: -8px;
+}
+
+.toggle-max {
+    top: -8px;
+    right: -10px;
+}
+
+.filter-group {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.range {
+    margin-top: 35px;
+    width: 287px;
+}
+
+.range-wrapper-inputs {
+    display: flex;
+    justify-content: center;
+}
+
+.catalog-filter-label {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.range-wrapper-inputs {
+    padding: 0;
+    margin: 0;
+}
+
+.range-input {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    color: var(--basic-white);
+    border: 2px var(--basic-white) solid;
+    background-color: transparent;
+    box-sizing: border-box;
+    width: calc(287px / 2);
+    padding: 11px 10px 16px 3px;
+}
+
+.left-input {
+    border-radius: 4px 0 0 4px;
+}
+
+.left-input:hover {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.right-input {
+    border-radius: 0 4px 4px 0;
+}
+
+.right-input:hover {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.range-input:focus-visible {
+    border-color: var(--basic-white);
+    outline: 3px solid #81B3D2;
+    box-shadow: inset 0 0 0 3px #81B3D2;
+    z-index: 1;
+}
+
+.range-input:active {
+    background: #756257;
+    outline: none;
+    box-shadow: none;
+}
+
+.input-left::after {
+    content: "от";
+    position: absolute;
+    width: 17px;
+    height: 23px;
+    top: 11px;
+    left: 112px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-right::after {
+    content: "до";
+    position: absolute;
+    width: 18px;
+    height: 24px;
+    top: 11px;
+    left: 108px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.right-wrapper {
+    margin-left: -2px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+/* Кнопки фильтра */
+.button {
+    display: grid;
+}
+
+.filter-btn-submit {
+    width: 160px;
+    height: 48px;
+    background: var(--special-cold-light);
+    color: var(--basic-white);
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    border: none;
+}
+
+.filter-btn-button {
+    width: 160px;
+    height: 23px;
+    background: none;
+    color: var(--basic-white);
+    font-size: 18px;
+    line-height: 24px;
+    vertical-align: center;
+    border: none;
+}
+
+/* Сортировка гостиниц после фильтрации */
+
+
+.sorting {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.sorting-title {
+    font-size: 30px;
+    line-height: 39px;
+}
+
+.sort-filter {
+    width: 287px;
+    height: 48px;
+    border: var(--basic-gray) 3px solid;
+    border-radius: 4px;
+    margin-left: 192px;
+}
+
+.sorting-type {
+    margin-left: 118px;
+    display: flex;
+    align-items: center;
+}
+
+.select-control {
+    font-weight: 400;
+    border: 2px var(--basic-gray) solid;
+    border-radius: 4px;
+    width: 287px;
+    height: 48px;
+    font-size: 18px;
+    line-height: 23px;
+    padding-left: 15px;
+    padding-bottom: 2px;
+    background: url("../img/drop.svg") no-repeat right 19px center;
+    appearance: none;
+}
+
+.select-control:hover {
+    border: 2px var(--special-cold-light) solid;
+}
+
+.select-control:focus {
+    border: 2px var(--special-cold-light) solid;
+    outline: none;
+}
+
+.select-control:active {
+    color: rgba(51, 51, 51, 0.3);
+    border: 2px var(--basic-gray) solid;
+}
+
+/* Гостиниц на странице: */
+
+.sorting-control {
+    padding-left: 15px;
+    width: 160px;
+    height: 48px;
+    border: 2px var(--basic-gray) solid;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    background-image: url("../img/drop.svg");
+    background-repeat: no-repeat;
+    background-position: right 19px center;
+    appearance: none;
+    margin: 5px;
+}
+
+.sorting-control:hover {
+    border: 2px var(--special-cold-light) solid;
+}
+
+.sorting-control:focus {
+    border: 2px var(--special-cold-light) solid;
+    outline: none;
+}
+
+.sorting-control:active {
+    color: rgba(51, 51, 51, 0.3);
+    border-color: transparent;
+}
+
+/* отображение гостиниц на сайте */
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    padding-left: 18px;
+}
+
+.cards-filter {
+    display: flex;
+}
+
+.card-grid-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7px;
+    padding: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid #E6E6E6;
+    box-sizing: border-box;
+}
+
+.card-grid-toggle:hover {
+    border-color: #83B3D3;
+}
+
+.card-grid-toggle:focus-visible {
+    border-color: #83B3D3;
+    outline: none;
+}
+
+.card-grid-toggle:active {
+    border-color: #000000;
+}
+
+.toggle-current {
+    border-color: #000000;
+}
+
+/* СПИСОК ГОСТИНИЦ после сортировки и фильтрации */
+
+/* название */
+.hotel-title {
+    font-size: 24px;
+    line-height: 31px;
+    margin: 0;
+    text-transform: none;
+}
+
+.hotel-title:hover {
+    color: var(--special-warm-light);
+}
+
+.hotel-title:focus {
+    color: var(--special-warm-light);
+    border: 3px var(--special-cold-light) solid;
+    border-radius: 4px;
+}
+
+.hotel-title:active {
+    color: rgba(117, 98, 87, 0.3);
+}
+/* изображение гостиницы */
+.hotel-img:hover {
+    opacity: 60%;
+}
+
+.hotel-img:focus {
+    border: 3px var(--special-cold-light) solid;
+}
+
+.hotel-img:active {
+    opacity: 30%;
+}
+
+.catalog-item {
+    display: flex;
+    margin: 72px;
+    justify-content: space-evenly;
+}
+
+.container-hotel {
+    display: grid;
+    align-content: space-between;
+    margin-left: 37px;
+}
+
+.hotel-desc {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    column-gap: 78px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: none;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.hotel-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+/* кнопка ПОДРОБНЕЕ */
+.more-btn {
+    width: 151px;
+    height: 37px;
+    background: var(--special-warm-light);
+    color: var(--basic-white);
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.more-btn:hover {
+    background: var(--special-warm-dark);
+}
+
+.more-btn:focus {
+    background: var(--special-warm-dark);
+    border: 3px var(--special-cold-light) solid;
+    border-radius: inherit;
+}
+
+.more-btn:active {
+    background: var(--special-warm-dark);
+    color: rgba(255, 255, 255, 0.3);
+}
+/* кнопка В ИЗБРАННОЕ */
+.fav-btn {
+    width: 160px;
+    height: 37px;
+    background: var(--special-cold-light);
+    color: var(--basic-white);
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.fav-btn:hover {
+    background: var(--special-cold-dark);
+}
+
+.fav-btn:focus {
+    background: var(--special-cold-dark);
+    border: 3px var(--special-warm-light) solid;
+    border-radius: inherit;
+}
+
+.fav-btn:active {
+    background: var(--special-cold-dark);
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.fav-btn-checked {
+    background: var(--special-neutral-light);
+}
+
+.fav-btn-checked:hover {
+    background: var(--special-neutral-dark);
+}
+
+.fav-btn-checked:focus {
+    background: var(--special-neutral-dark);
+    border: 3px var(--special-warm-light) solid;
+    border-radius: inherit;
+}
+
+.fav-btn-checked:active {
+    background: var(--special-neutral-dark);
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* рейтинг */
+
+.stars {
+    padding-bottom: 46px;
+}
+
+.rating-container {
+    align-self: flex-end;
+}
+
+.rating {
+    display: inline-block;
+    width: 160px;
+    height: 37px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    background-color: var(--basic-light);
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* Кнопка - ЗАГРУЗИТЬ ЕЩЕ */
+
+.button-load {
+    display: inline-block;
+    color: var(--basic-white);
+    background-color: var(--special-cold-light);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 4px;
+    width: 625px;
+    height: 55px;
+    cursor: pointer;
+    margin: 31px 287px 30px 286px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.button-load:hover {
+    background: var(--special-cold-dark);
+}
+
+.button-load:focus {
+    background: var(--special-cold-dark);
+    border: 3px var(--special-warm-light) solid;
+    outline: none;
+}
+
+.button-load:active {
+    color: rgba(255, 255, 255, 0.3);
+    border-color: transparent;
+}
+
+/* Пагинация */
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 72px 30px;
+}
+
+.pagination-list {
+    display: flex;
+    gap: 8px;
+}
+
+.pagination-item {
+    width: 55px;
+    height: 55px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 15px;
+    background: var(--special-cold-light);
+}
+
+.pagination-link:not(.pagination-current) {
+    color: var(--basic-white);
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.pagination-item:hover {
+    background: var(--special-cold-dark);
+    color: var(--basic-white);
+}
+
+.pagination-item:focus {
+    border: 3px var(--special-warm-light) solid;
+    border-radius: 4px;
+    color: var(--basic-white);
+}
+
+.pagination-item:active {
+    background: var(--special-cold-dark);
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.pagination-current {
+    background: var(--basic-gray);
+    color: var(--basic-black);
+}
+
+.pag-nav {
+    display: flex;
+    align-items: center;
+    gap: 51px;
+}
+
+.pagination-nav {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.pagination-btn {
+    width: 160px;
+    height: 48px;
+    border: var(--basic-gray) 3px solid;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.page-card-sorting {
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: none;
+    font-weight: 400;
+    padding-left: 292px;
+}
+
+/* Подписка на рассылку - в каталоге */
+
+.catalog-subscription {
+    background: var(--basic-white);
+    padding: 94px 200px;
+    color: var(--basic-black);
 }
