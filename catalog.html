@@ -23,13 +23,13 @@
     <nav class="navigation">
         <ul class="navigation-list list-reset">
             <li class="navigation-item">
-                <a class="navigation-link current-page" href="index.html">Главная</a>
+                <a class="navigation-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
                 <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-                <a class="navigation-link" href="catalog.html">Гостиницы</a>
+                <a class="navigation-link current-catalog" href="catalog.html">Гостиницы</a>
             </li>
         </ul>
         <a class="navigation-logo" href="index.html">
@@ -75,15 +75,16 @@
 </header>
 
 <main>
-    <section class="filter">
-        <h1 class="filter-title">Гостиницы Седоны</h1>
 
+    <!-- Фильтр поиска гостиниц -->
+
+    <section class="filter">
+            <h1 class="filter-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs list-reset">
             <li class="breadcrumbs-item">
                 <a class="bread-icon" href="index.html">
-                    <span class="visually-hidden">Ссылка на главную страницу.</span>
                     <svg class="breadcrumbs-icon" width="12" height="12"
-                         viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иконка дома.">
+                         viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иконка дома">
                         <path d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z" fill="#fff"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4 10h1V7.5h2V10h1V6.5H4V10Z" fill="#fff"/>
                     </svg>
@@ -91,7 +92,7 @@
             <li class="breadcrumbs-item">
                 <a>
                     <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="12"
-                         height="12" viewBox="0 0 5 8" role="img" aria-label="Иконка декоративной стрелки.">
+                         height="12" viewBox="0 0 5 8" role="img" aria-label="Иконка декоративной стрелки">
                         <g opacity=".3" clip-path="url(#a)">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                   d="M4.8 3.6 1 .2C.8 0 .4 0 .1.2-.2.4-.1.8.1 1l3.3 3L.2 7c-.2.2-.2.6 0 .8 0 .1.3.2.4.2.1 0 .3-.1.4-.2l3.8-3.4c.3-.2.3-.6 0-.8Z"
@@ -110,77 +111,96 @@
             </li>
         </ul>
 
-        <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
-            <fieldset>
-                <legend class="filter-subtitle">Инфраструктура:</legend>
-                <ul class="filter-list list-reset">
-                    <li>
-                        <input class="control-input visually-hidden" type="checkbox" name="swimming-pool"
-                               id="filter-swimming-pool" checked>
-                        <label class="control-label" for="filter-swimming-pool">Бассейн</label>
-                    </li>
-                    <li>
-                        <input class="control-input visually-hidden" type="checkbox" name="parking" id="filter-parking"
-                               checked>
-                        <label class="control-label" for="filter-parking">Парковка</label>
-                    </li>
-                    <li>
-                        <input class="control-input visually-hidden" type="checkbox" name="wifi" id="filter-wifi">
-                        <label class="control-label" for="filter-wifi">Wi-Fi</label>
-                    </li>
-                </ul>
-            </fieldset>
-            <fieldset>
-                <legend class="filter-subtitle">Тип жилья:</legend>
-                <ul class="filter-list list-reset">
-                    <li>
-                        <input class="control-input visually-hidden" type="radio" name="type" value="гостиница"
-                               id="filter_hotel" checked>
-                        <label class="control-label" for="filter_hotel">Гостиница</label>
-                    </li>
-                    <li>
-                        <input class="control-input visually-hidden" type="radio" name="type" value="мотель"
-                               id="filter_motel">
-                        <label class="control-label" for="filter_motel">Мотель</label>
-                    </li>
-                    <li>
-                        <input class="control-input visually-hidden" type="radio" name="type" value="апартаменты"
-                               id="filter_apartment">
-                        <label class="control-label" for="filter_apartment">Апартаменты</label>
-                    </li>
-                </ul>
-            </fieldset>
-            <fieldset class="filter-group">
-                <legend class="filter-subtitle">Стоимость, ₽:</legend>
-                <div class="range">
-                    <div class="range-wrapper-inputs">
-                        <label class="catalog-filter-label input-left">
-                            <input class="range-input left-input" type="number" value="0" name="min-price">
-                        </label>
-                        <div class="range-wrapper-inputs right-wrapper">
-                            <label class="catalog-filter-label input-right">
-                                <input class="range-input right-input" type="number" value="9000" name="max-price">
+            <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
+                <fieldset>
+                    <legend class="filter-subtitle">Инфраструктура:</legend>
+                    <ul class="filter-list list-reset">
+                        <li>
+                            <label class="check">
+                                <input class="check_input" type="checkbox" checked>
+                                <span class="check_box"></span>
+                                Бассейн
                             </label>
+                        </li>
+                        <li>
+                            <label class="check">
+                                <input class="check_input" type="checkbox" checked>
+                                <span class="check_box"></span>
+                                Парковка
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check">
+                                <input class="check_input" type="checkbox">
+                                <span class="check_box"></span>
+                                Wi-Fi
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend class="filter-subtitle">Тип жилья:</legend>
+                    <ul class="filter-list list-reset">
+                        <li>
+                            <label class="radio">
+                                <input class="radio_input" type="radio" checked>
+                                <span class="radio_btn"></span>
+                                Гостиница
+                            </label>
+                        </li>
+                        <li>
+                            <label class="radio">
+                                <input class="radio_input" type="radio">
+                                <span class="radio_btn"></span>
+                                Мотель
+                            </label>
+                        </li>
+                        <li>
+                            <label class="radio">
+                                <input class="radio_input" type="radio">
+                                <span class="radio_btn"></span>
+                                Апартаменты
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="filter-group">
+                    <legend class="filter-subtitle">Стоимость, ₽:</legend>
+                    <div class="range">
+                        <div class="range-wrapper-inputs">
+                            <label class="catalog-filter-label input-left">
+                                <input class="range-input left-input" type="number" value="0" placeholder="от" name="min-price">
+                            </label>
+                            <div class="range-wrapper-inputs right-wrapper">
+                                <label class="catalog-filter-label input-right">
+                                    <input class="range-input right-input" type="number" value="9000" placeholder="до" name="max-price">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="range-scale">
+                            <div class="range-bar">
+                                <button class="range-toggle toggle-min" type="button">
+                                    <span class="visually-hidden">Изменить минимальную цену.</span>
+                                </button>
+                                <button class="range-toggle toggle-max" type="button">
+                                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="range-scale">
-                        <div class="range-bar">
-                            <button class="range-toggle toggle-min" type="button">
-                                <span class="visually-hidden">Изменить минимальную цену.</span>
-                            </button>
-                            <button class="range-toggle toggle-max" type="button">
-                                <span class="visually-hidden">Изменить максимальную цену.</span>
-                            </button>
-                        </div>
-                    </div>
+                </fieldset>
+                <div class="button">
+                    <button class="filter-btn-submit" type="submit">Применить</button>
+                    <button class="filter-btn-button" type="button">Сбросить</button>
                 </div>
-            </fieldset>
-            <div class="button">
-                <button class="filter-btn-submit" type="submit">Применить</button>
-                <button class="filter-btn-button" type="button">Сбросить</button>
-            </div>
-        </form>
+            </form>
     </section>
+
+    <!-- Сортировка гостиниц -->
+
     <section class="sorting">
         <h2 class="sorting-title">Найдено гостиниц: 38</h2>
         <div>
@@ -223,9 +243,12 @@
         </div>
     </section>
 
+    <!-- Список гостиниц -->
+
     <section class="catalog">
-        <h2 class="catalog-title">Каталог гостиниц</h2>
+        <h2 class="visually-hidden catalog-title">Каталог гостиниц</h2>
         <ul class="catalog-list list-reset">
+
             <li class="catalog-item">
                 <img class="hotel-img" src="img/hotel-1.jpg" width="180" height="120" alt="Отель Amara Resort & Spa">
                 <div class="container-hotel">
@@ -241,22 +264,27 @@
                 </div>
                 <div class="rating-container">
                     <div class="stars">
-                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
-                    </svg>
-                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
-                    </svg>
-                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
-                    </svg>
-                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
-                    </svg>
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
+                                  fill="#83B3D3"/>
+                        </svg>
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
+                                  fill="#83B3D3"/>
+                        </svg>
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
+                                  fill="#83B3D3"/>
+                        </svg>
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
+                                  fill="#83B3D3"/>
+                        </svg>
                     </div>
                     <span class="rating">Рейтинг: 8,5</span>
                 </div>
             </li>
+
             <li class="catalog-item">
                 <img class="hotel-img" src="img/hotel-2.jpg" width="180" height="120" alt="Отель Desert Quail Inn">
                 <div class="container-hotel">
@@ -272,15 +300,18 @@
                 </div>
                 <div class="rating-container">
                     <div class="stars">
-                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
-                    </svg>
-                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
-                    </svg>
-                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
-                    </svg>
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
+                                  fill="#83B3D3"/>
+                        </svg>
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
+                                  fill="#83B3D3"/>
+                        </svg>
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
+                                  fill="#83B3D3"/>
+                        </svg>
                     </div>
                     <span class="rating">Рейтинг: 8,9</span>
                 </div>
@@ -300,12 +331,14 @@
                 </div>
                 <div class="rating-container">
                     <div class="stars">
-                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
-                    </svg>
-                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
-                    </svg>
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
+                                  fill="#83B3D3"/>
+                        </svg>
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
+                                  fill="#83B3D3"/>
+                        </svg>
                     </div>
                     <span class="rating">Рейтинг: 9,2</span>
                 </div>
@@ -325,12 +358,14 @@
                 </div>
                 <div class="rating-container">
                     <div class="stars">
-                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
-                    </svg>
-                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z" fill="#83B3D3"/>
-                    </svg>
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
+                                  fill="#83B3D3"/>
+                        </svg>
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
+                                  fill="#83B3D3"/>
+                        </svg>
                     </div>
                     <span class="rating">Рейтинг: 9,2</span>
                 </div>
@@ -377,6 +412,7 @@
             <button class="visually-hidden" type="submit">Выдача карточек</button>
         </form>
     </section>
+
 
 
     <!-- Подписаться на рассылку -->
